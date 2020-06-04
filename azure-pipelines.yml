@@ -60,7 +60,7 @@ steps:
     publishTestResults: true
     projects: '**/*.Tests.csproj'
 
-- script: |
+- script:
     reportgenerator -reports:$(Build.SourcesDirectory)/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/CodeCoverage -reporttypes:HtmlInline_AzurePipelines
   displayName: 'Create code coverage report'
 
